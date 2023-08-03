@@ -1,7 +1,5 @@
 # Folders and files to be ingnored for git
 
-# For iOS
-.DS_Store
 # Video files
 *.mov
 *.avi
