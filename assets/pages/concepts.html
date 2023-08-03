@@ -7,18 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <style>
-    .box {
-      border: 2px solid red;
-
-    }
-  </style>
+<link rel="stylesheet" href="../styles/concepts.css">
 </head>
 
 <body>
   <div class="container box my-5">
-    <h1>You know it!</h1>
+    <p>You know it!</p>
   </div>
+  <div class="container-sm box my-5">
+    <p>container-sm </p>
+  </div>
+  <div class="container-md box my-5">
+    <p>container-md</p>
+  </div>
+  <div class="container-fluid box my-5">
+    <p>container-fluid</p>
+  </div>
+
+<!-- grid-container -->
+<!-- emmet: section.container>.row>.col.box-col*3 -->
+<!-- to write multiple lines ctrl alt arrow(up or down)-->
+<section class="container">
+  <div class="row">
+    <div class="col box-col"><p>col</p></div>
+    <div class="col box-col"><p>col</p></div>
+    <div class="col box-col"><p>col</p></div>
+  </div>
+</section>
+
+
+
+
   <!-- add faster with this  main.container#main>section.btn*3-->
   <!-- <main class="container" id="main">
     <section class="btn"></section>
