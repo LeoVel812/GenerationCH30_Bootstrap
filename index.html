@@ -18,7 +18,7 @@
 
 <body>
   <main class="container-fluid text-center bg-black text-light">
-    <div class="row align-items-center justify-content-center" style="height:100vh">
+    <div class="row align-items-center justify-content-center" style="height:80vh">
       <!-- three resposnses -->
       <div class="col-10 col-md-6 col-lg-8">
         <img onclick="clickPatrick()" class="img-fluid rounded" src="./assets/img/Pat_builder.png" width="400" alt="Patrick building">
@@ -29,6 +29,13 @@
       </div>
     </div>
   </main>
+  <footer class="container-fluid text-center">
+    <div class="row align-items-center justify-content-center" style="height: 20vh;">
+      <div class="col-4" onclick="changeColor(this,'red')">Change color to red</div>
+      <div class="col-4" onclick="changeColor(this,'green')">Change color to green</div>
+      <div class="col-4" onclick="changeColor(this,'blue')">Change color to blue</div>
+    </div>
+  </footer>
   <!-- <script>
     console.log("this is the body");
     const date2 = new Date();
