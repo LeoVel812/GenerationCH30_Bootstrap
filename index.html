@@ -30,10 +30,14 @@
     </div>
   </main>
   <footer class="container-fluid text-center">
-    <div class="row align-items-center justify-content-center" style="height: 20vh;">
-      <div class="col-4" onclick="changeColor(this,'red')">Change color to red</div>
-      <div class="col-4" onclick="changeColor(this,'green')">Change color to green</div>
-      <div class="col-4" onclick="changeColor(this,'blue')">Change color to blue</div>
+    <div class="row align-items-center justify-content-center" style="height: 15vh;">
+      <div id="redColor" class="col-6 col-md-3" onclick="changeColor(this,'red')">Change color to red</div>
+      <div id="greenColor" class="col-6 col-md-3" onclick="changeColor(this,'green')">Change color to green</div>
+      <div id="blueColor" class="col-6 col-md-3" onclick="changeColor(this,'blue')">Change color to blue</div>
+      <div id="userColor" class="col-6 col-md-3" onclick="changeColorWithPrompt(this)">Enter a color</div>
+    </div>
+    <div class="row align-items-center justify-content-center" style="height: 5vh;">
+      <div class="col-12"><button type="button" class="btn btn-dark" onclick="resetColors()">Reset</button></div>
     </div>
   </footer>
   <!-- <script>
