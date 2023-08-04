@@ -35,3 +35,8 @@ function resetColors() {
   // setting manually:
   // refRedColor.style.color="Red";
 }
+function changeName() {
+  const promptName = prompt("Type your name, please:");
+  const refUserName = document.getElementById("userName");
+  refUserName.innerHTML = "<h3>Hello " + promptName + " !</h3>";
+}
