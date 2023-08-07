@@ -103,3 +103,58 @@ console.log(myAccountData);
 console.table(myAccountData);
 console.log(myAccountData.fullName); //types the function definition
 console.log(myAccountData.fullNameUppercase()); //calls the method fullNameUppercase()
+
+//------
+//explicit conversions
+const breakHour = 13.05;
+console.log(`Break Hour: ${breakHour} h`);
+const BreakHourTxt = String(breakHour);
+console.log("Break Hour: " + breakHour + " h");
+console.log("end of the Break : " + breakHour + 0.2 + " h");
+
+const greenColor = 0x008000;
+console.log(`RGB value of Green Color: ${greenColor}`);
+console.log(`RGB value of Green Color: ${greenColor.toString()}`);
+console.log(`RGB value of Green Color: ${greenColor.toString(16)}`);
+console.log(
+  `RGB value of Green Color: #${greenColor.toString(16).padStart(6, "0")}`
+);
+
+//parsing to Number
+const myAgeTxt = "25";
+const sum = 10 + myAgeTxt;
+console.log(`sum: ${sum}`);
+
+console.log(`sum using Number(): ${10 + Number(myAgeTxt)}`);
+console.log(`sum using paseInt(): ${10 + parseInt(myAgeTxt)}`);
+console.log(`sum using paseFloat(): ${10 + parseFloat(myAgeTxt)}`);
+console.log(`sum using paseFloat(): ${10 + +myAgeTxt}`);
+
+//Number() vs parseInt()
+// Number() parses integer and decimal values
+//parseInt() parses only the integer part
+console.log(`parsing a decimal number with parseInt(): ${parseInt(100.125)}`); //100
+// Number() returns NaN if the string has a non-numeric character
+// parseInt() parses integers till finds a non-numeric character
+// if the input doesn't begin with a numeric value, returns NaN
+console.log(Number("123-456")); //NaN
+console.log(parseInt("123-456")); //123
+console.log(parseInt("$123-456")); //123
+console.log(`parseInt("$123-456".slice(1)): ${"$123-456".slice(1)}`); //123
+console.log(Number(true));
+console.log(parseInt(true));
+
+//Boolean parsing
+// false:"",0,null,indefined
+console.log(`Boolean(1): ${Boolean(1)}`); //true
+console.log(`Boolean(1000): ${Boolean(1000)}`); //true
+console.log(`Boolean('Hello'): ${Boolean("Hello")}`); //true
+console.log(`Boolean('false'): ${Boolean("false")}`); //true
+console.log(`Boolean(' '): ${Boolean(" ")}`); //true
+console.log(`Empty string Boolean(''): ${Boolean("")}`); //true
+
+
+//parsing from Number to String
+
+
+String(JSON.stringify({ name: "Leon" }));
