@@ -88,7 +88,7 @@ console.log(myObj);
 const myAccountData = {
   name: "Leon",
   lastname: "Luna",
-  age: 39,
+  age: 26,
   isBellicose: false,
   fullName: function () {
     return `Full name: ${this.name} ${this.lastname}`;
