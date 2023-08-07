@@ -75,7 +75,7 @@ const mySymbol = Symbol();
 const mySymbol2 = Symbol();
 const myKey = "code";
 console.log(`mySymbol: ${mySymbol === mySymbol2}`);
- 
+
 const myObj = {
   clave: "valor",
   [mySymbol]: 16, //private key, it isn't iterable and doesn't storage in LocalStorage
@@ -84,3 +84,22 @@ const myObj = {
 };
 console.log(myObj);
 
+//data type: Object
+const myAccountData = {
+  name: "Leon",
+  lastname: "Luna",
+  age: 39,
+  isBellicose: false,
+  fullName: function () {
+    return `Full name: ${this.name} ${this.lastname}`;
+  },
+  //   returns Uppercase fullName
+  fullNameUppercase: function () {
+    return `Full name: ${this.name.toUpperCase()} ${this.lastname.toUpperCase()}`;
+  },
+};
+
+console.log(myAccountData);
+console.table(myAccountData);
+console.log(myAccountData.fullName); //types the function definition
+console.log(myAccountData.fullNameUppercase()); //calls the method fullNameUppercase()
