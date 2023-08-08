@@ -122,3 +122,82 @@ function checkOverlap(set1, set2) {
   console.log(commonCourses);
 }
 checkOverlap(student1Courses, student2Courses);
+
+//solving with filter and include
+function getCommonCoursesWithFilter(array1Courses, array2Courses) {
+  return array1Courses.filter((course) => array2Courses.includes(course));
+}
+console.log(
+  `Common courses using filter and include: 
+  ${getCommonCoursesWithFilter(student1Courses, student2Courses)}`
+);
+
+//breaking down with filter and include
+console.log("###################################");
+function includeCourse(course, index, array) {
+  console.log(`Elemento ${course}, indice ${index}, arreglo ${array}  `);
+  return true;
+}
+
+function getCoursesWithFilter(array1Courses, array2Courses) {
+  const commonCourses = array1Courses.filter(includeCourse); // ["Math", "English", "Programming", "Biology", "Physics", "Music"];
+  return commonCourses;
+}
+console.log(
+  `Comúnxpartes: ${getCoursesWithFilter(student1Courses, student2Courses)}`
+);
+
+// count the number of p in a statement
+const traba =
+  "Peso Pluma pica papas con un pico y una pala con un pica pica papas Peso Pluma";
+// with arrow functions
+// console.log(word.split("p"));
+// console.log(word.split("p").length - 1);
+
+// console.log(`number of P: ${word.split("p").length - 1}`);
+const countChars = (statement, char) => statement.split(char).length - 1;
+console.log(`number of p: ${countChars(traba, "p")}`);
+console.log(
+  `number of p and P: ${countChars(traba, "p") + countChars(traba, "P")}`
+);
+
+const countCharsSensitive = (statement, char) =>
+  statement.toLowerCase().split(char).length - 1;
+console.log(
+  `number of p and P with sensitive case: ${countCharsSensitive(traba, "p")}`
+);
+
+// recursion
+/* calls itself within 
+solutions and algorithms that substact in mathematial, through 
+data structures and seek and sort algorithms
+function nameRecursionFunction(parameters) { 
+if(stopCondition){
+  return something;
+  else{
+    //recursion call
+    nameRecursionFunction(new Parameter)
+  }
+}
+}
+*/
+
+// factorial of a number
+function factorialNumber(number) {
+  let result = 1;
+  for (let i = 1; i < number + 1; i++) {
+    result *= i;
+  }
+  return result;
+}
+console.log(`5!: ${factorialNumber(5)}`);
+
+function factorialNumberRecursion(number) {
+  if (number <= 0 ) {
+    return 1;
+  } else {
+    console.log(`${number}*${number - 1} `);
+    return number * factorialNumberRecursion(number - 1);
+  }
+}
+console.log(`5!: ${factorialNumberRecursion(5)}`);
