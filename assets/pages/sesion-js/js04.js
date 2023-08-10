@@ -21,6 +21,8 @@ for (let team = 0; team < personasEnCh30.length; team++) {
   }
 }
 /* Using for of */
+console.log("=========for of========");
+
 const myPet = "Kraken";
 for (const character of myPet) {
   console.log(character);
@@ -31,4 +33,39 @@ for (const team of personasEnCh30) {
   for (const member of team) {
     console.log(`printing a member:${team}`);
   }
+}
+
+/* Using forEach */
+console.log("=========forEach========");
+function loopTeams(team, index, array) {
+  console.log(`Team index ${index}: ${team}`);
+  team.forEach(loopMembers);
+  return team;
+}
+function loopMembers(member, index, array) {
+  console.log(`Member index  ${index}: ${member}`);
+  return member;
+}
+personasEnCh30.forEach(loopTeams); //looping only teams
+// personasEnCh30.forEach(loopTeams.forEach(loopMembers)); //looping teams and members
+
+// using forEach
+console.log("=========forEach with arrow functions========");
+
+personasEnCh30.forEach((team, indexTeam) => {
+  console.log(`Team[${indexTeam}]: ${team}`);
+  team.forEach((member, indexMember) =>
+    console.log(`Member[${indexMember}]: ${member}`)
+  );
+});
+console.log("=========forEach with arrow functions only indexes========");
+personasEnCh30.forEach((team, indexTeam) => {
+  team.forEach((member, indexMember) =>
+    console.log(`[Team][Member]:[${indexTeam}][${indexMember}]: ${member}`)
+  );
+});
+//printing out the chars of myPet string
+myPet.split("").forEach((char, charIndex) => console.log(char));
+for (const char of myPet) {
+  console.log(char);
 }
