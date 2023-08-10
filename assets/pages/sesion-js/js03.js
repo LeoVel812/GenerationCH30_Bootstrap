@@ -89,3 +89,70 @@ console.log(`Fan: ${setFanVelocity(8)}`);
 console.log(`Fan: ${setFanVelocity()}`);
 console.log(`Fan: ${setFanVelocity(3)}`);
 console.log(`Fan: ${setFanVelocity("2")}`);
+// console.log(`Fan: ${setFanVelocity(prompt("Set velocity", 1))}`);
+
+// print season of the year
+/* ask for a month(number) */
+const printSeasonSwitch = (month) => {
+  let season;
+  switch (parseInt(month)) {
+    case 12:
+    case 1:
+    case 2:
+      season = "Winter";
+      break;
+    case 3:
+    case 4:
+    case 5:
+      season = "Spring";
+      break;
+    case 6:
+    case 7:
+    case 8:
+      season = "Summer";
+      break;
+    case 9:
+    case 10:
+    case 11:
+      season = "Autumn/Fall";
+      break;
+    default:
+      season = "Non-existant month";
+  }
+  return season;
+};
+const printSeasonIfElse = (month) => {
+  let season;
+  month = parseInt(month);
+  if (month === 1 || month === 2 || month === 12) {
+    season = "Winter";
+  } else if (month >= 3 && month <= 5) {
+    season = "Spring";
+  } else if (month >= 6 && month <= 8) {
+    season = "Summer";
+  } else if (month >= 9 && month <= 11) {
+    season = "Autumn/Fall";
+  } else {
+    season = "Non-existant month";
+  }
+  return season;
+};
+// alert(`season: ${printseasonSwitch(prompt("Insert a month(number)"))}`);
+// alert(
+//   `season (else-if): ${printSeasonIfElse(prompt("Insert a month(number)"))}`
+// );
+
+// conditional (Ternary) operator
+const isPaidCreditCard = true;
+let msj;
+// if (isPaidCreditCard) msj = "CC is paid";
+// else msj = "CC is still not paid";
+
+isPaidCreditCard ? (msj = "CC is paid") : (msj = "CC is still not paid");
+console.log(msj);
+
+/* factorial recursive number */
+function factorialRecursive(number) {
+  return number <= 0 ? 1 : number * factorialRecursive(number - 1);
+}
+console.log(factorialRecursive(0));
