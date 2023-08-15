@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS06</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <main class="bg-dark text-light">
+    <!-- .container>.row>.col-8 -->
+    <div class="container ">
+      <!-- justify-content-center: vertical justify -->
+      <!-- align-items-center: horizontal justify -->
+      <div class="row align-items-center justify-content-center" style="height:60vh;">
+        <div class="col-8">
+          <h1 id="title">Session JS06</h1>
+          <h3 id="subtitle" class="text-warning">DOM Manipulation</h3>
+          <ul>
+            <li>DOM description</li>
+            <li>Access HTML elements</li>
+            <li>Read and validate forms</li>
+            <li>Hide and show HTML elements</li>
+          </ul>
+        </div>
+      </div>
+      <div class=" row justify-content-center align-content-center" style="height:40vh;">
+        <div id="descriptionCH30" class="col-6">
+
+        </div>
+        <div id="buttons" class="col-6 row justify-content-center align-content-center">
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button onclick="displayNoneElement()" type="button" class="btn btn-danger "><i class="bi bi-eraser-fill me-3"></i> Delete</button>
+            <button onclick="hiddenElement()" type="button" class="btn btn-warning"><i class="bi bi-eye-slash me-3"></i> Hide</button>
+            <button onclick="resetElements()" type="button" class="btn btn-success"><i class="bi bi-arrow-clockwise me-3"></i> Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="./js06.js"></script>
+</body>
+
+</html>

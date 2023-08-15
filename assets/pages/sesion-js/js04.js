@@ -69,3 +69,72 @@ myPet.split("").forEach((char, charIndex) => console.log(char));
 for (const char of myPet) {
   console.log(char);
 }
+//using break in loops
+for (let index = 0; index < 10; index++) {
+  if (index >= 5) {
+    console.log("stopped at " + index);
+    break;
+  }
+  console.log(index);
+}
+
+//1 to 5 table
+for (let i = 1; i < 6; i++) {
+  for (let j = 1; j < 11; j++) {
+    console.log(`${i}*${j}:${i * j}`);
+  }
+}
+console.log("=====stop in n*4 in all ======");
+//stopping at 4 in nested loop
+for (let i = 1; i < 6; i++) {
+  for (let j = 1; j < 11; j++) {
+    if (j === 5) break;
+    console.log(`${i}*${j}:${i * j}`);
+  }
+}
+console.log("=====stop in 2*4  use break with tag======");
+//put a label before the loops
+breakOuterLoop: for (let i = 1; i < 6; i++) {
+  for (let j = 1; j < 11; j++) {
+    if (i === 2 && j === 5) break breakOuterLoop;
+    // if (j === 5) break;
+    console.log(`${i}*${j}:${i * j}`);
+  }
+}
+console.log("=====stop in n*3  use continue with tag======");
+//put a label before the loops
+keepOuterLoop: for (let i = 1; i < 6; i++) {
+  for (let j = 1; j < 11; j++) {
+    if (j > 3) continue keepOuterLoop;
+    // if (j === 5) break;
+    console.log(`${i}*${j}:${i * j}`);
+  }
+}
+
+// While Loop
+
+// let counter = 1;
+// while (confirm("Do you want to continue?")) {
+//   console.log(`Times you've pushed ok: ${counter}`);
+//   counter++;
+// }
+
+let value = -3;
+while (value < 4) {
+  console.log(`value:${value}`);
+  value++;
+}
+
+// do while loop
+console.log(`=======`);
+value = 4;
+do {
+  console.log(`value:${value}`);
+  value++;
+} while (value < 4);
+const numberStars = 5;
+let star = "";
+for (let i = 1; i <= numberStars; i++) {
+  star += "*";
+  console.log(star);
+}
